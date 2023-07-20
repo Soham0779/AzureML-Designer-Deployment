@@ -8,6 +8,17 @@ Model building, Model training, Model deployment(to Batch and Realtime Endpoint)
 1. To create Pipeline in Azure ML Designer tool.
 1. To perform feature selection, training the model, model evaluation and create the Job(Experiment) for the model.
 1. To register the model
-1. To deploy the registered model to Batch endpoint and Real-time endpoint.
+1. To deploy the registered model to the Batch endpoint and the Real-time endpoint.
 1. To consume the deployed model.
+
+# Solution Methodology
+
+Before starting with the main objectives of this project there are some pre-requisites.
+
+## Prerequisites
+1.	Azure Subscription
+2.	Azure Resource Group
+3.	Azure Workspace
+4.	Azure Compute Cluster and Compute Instance
+
 
