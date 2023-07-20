@@ -15,10 +15,10 @@ Model building, Model training, Model deployment(to Batch and Realtime Endpoint)
 
 Before starting with the main objectives of this project there are some pre-requisites.
 
-## Prerequisites
+## 0. Prerequisites
 1.	Azure Subscription
 2.	Azure Resource Group
 3.	Azure Workspace
 4.	Azure Compute Cluster and Compute Instance
 
-
+## 1. Create Azure Storage account (ADLS)
