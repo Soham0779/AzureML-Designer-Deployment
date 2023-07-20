@@ -21,7 +21,7 @@ Before you get started, you will need:
 1. In the Extensions view search bar, type "Azure Machine Learning" and select the first extension.
 1. Select **Install**.
 
-![Extension Installation](Soham0779/AzureML-Designer-Deployment/media/Screenshot (737).png)
+![Extension Installation](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/storage-account-1.png?raw=true)
 
 
 ## Sign in to your Azure Account
