@@ -21,7 +21,7 @@ Before you get started, you will need:
 1. In the Extensions view search bar, type "Azure Machine Learning" and select the first extension.
 1. Select **Install**.
 
-![Extension Installation](media/2023-06-12.png)
+![Extension Installation](media/Screenshot (737).png)
 
 ## Sign in to your Azure Account
 
