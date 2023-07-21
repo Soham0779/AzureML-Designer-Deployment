@@ -288,5 +288,8 @@ If deployment Succeeds then continue
         - Select the data asset crated in step **"7. Create Data Asset for Batch-Deployment"**
     
     ![Batch ep Job](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(760).png?raw=true)
-8. Check the prediction.csv
+
+8. Check the prediction.csv in Azure Storage Account.
+
 ![prediction](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(761).png?raw=true)
+
