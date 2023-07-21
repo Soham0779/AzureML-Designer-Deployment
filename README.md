@@ -90,7 +90,7 @@ To use the dataset in ADLS we must create the data asset in Azure ML Studio, so 
 
             ![Select Storage account key](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(743).png?raw=true)
 
-        ![Create Data Store](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(744).png?raw=true)
+            ![Create Data Store](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/AzureStorage.png?raw=true)
         - Select Newly created Data Store as Storage type (eg. crain_adls in my case)
     - Storage Path
         - Select Folder where dataset file(.csv) is present in Azure Storage Account
