@@ -281,14 +281,28 @@ If deployment Succeeds then continue
 6. Click on **"Jobs"** tab under your batch endpoint and not from side menu.
 
 ![Batch ep](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(759).png?raw=true)
+
 7. Follow steps given below
     - Job Settings
         - Deployment: Select the deployment (or go with default)
     - Select data source
         - Select the data asset crated in step **"7. Create Data Asset for Batch-Deployment"**
+        
         ![Batch ep Job](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Batch%20Job.png?raw=true)
 
 8. Check the prediction.csv in Azure Storage Account.
 
 ![prediction](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(761).png?raw=true)
 
+9. Download predictions.csv
+
+## 9. Create Real-time Endpoint
+1. Jobs(From side menu) -> Experiments -> your_experiment -> your_job -> Create inference pipeline -> Real-time inference pipeline
+
+![Real-time inference](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(762).png?raw=true)
+
+2. The inference pipeline gets created as follows
+
+![Real-time inference](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(763).png?raw=true)
+
+3. Submit the pipeline and create the job.
