@@ -166,5 +166,5 @@ Once the data asset is created, we can create the model inside Azure ML Designer
 
 *Note: Check 'Select existing experiment' if exists. This window will create New Experiment and will create a Pipeline Job under that experiment. To check the Job details click on **'Jobs'** under 'Assets' tab and Select name of your experiment under **'Experiment'** tab and click on Job name.
 
-Jobs > All experiments -> <name of your Experiment> -> <name of your Job>*
+Jobs > All experiments -> <\name of your Experiment> -> <\name of your Job>*
 
