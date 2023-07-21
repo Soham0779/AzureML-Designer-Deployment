@@ -162,9 +162,23 @@ Once the data asset is created, we can create the model inside Azure ML Designer
 6. Click on `Validate` button. (Check for errors)
 7. Click on `Submit` button
 
-![Select compute cluster](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(751).png?raw=true)
+![Submit job](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(751).png?raw=true)
 
 *Note: Check 'Select existing experiment' if exists. This window will create New Experiment and will create a Pipeline Job under that experiment. To check the Job details click on **'Jobs'** under 'Assets' tab and Select name of your experiment under **'Experiment'** tab and click on Job name.*
 
 *Jobs > All experiments -> name_of_your_Experiment -> name_of_your_Job*
+
+## 4. Evaluate Job
+Once the job gets executed successfully, we can evaluate the model.
+1. Right Click on **'Evaluate Model'** component.
+2. Preview Data -> Evaluation results
+
+![Evaluate model](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(752).png?raw=true)
+
+3. Evaluation Results
+
+![Evaluation Results](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(753).png?raw=true)
+
+## 5. Register Model
+Once the Job gets executed susscessfully we can register the model which we can use for Batch Deployment.
 
