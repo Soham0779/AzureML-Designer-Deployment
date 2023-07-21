@@ -201,7 +201,69 @@ Once the Job gets executed susscessfully we can register the model which we can 
         ![Evaluation Results](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(757).png?raw=true)
         - Click `Next`
     - Customize
-        - Copy paste the **'conda_env.yml'** file code here (The file is downloaded while registering the model. See the image).
+        - Copy paste the **'conda_env.yml'** file code here (The file is downloaded while registering the model. See the image in step 5. Register Model).
     - Review and Create the Environment.
 
-## 7. Create Batch Deployment
+## 7. Create Data Asset for Batch-Deployment
+1. Create Folder in ADLS and upload batch data in .csv file(s).
+2. Under **'Data assets'** tab click on `+ Create` button.
+    - Data Type
+        - Give 'Name' to Data asset.
+        - Select 'Type' as **'Folder'**(For data in .csv/.xlsx etc).
+        - Click on `Next`
+    - Data Source
+        - **"From Azure storage"** and `Next`
+    - Storage type: Created in Step 2(eg. crain_adls in my case)
+    - Storage Path: Select FOLDER(not files) in which data is present in batches.
+    - Review and Create
+
+## 8. Create Batch Deployment
+1. Select **'Models'** tab.
+2. Select Model to deploy
+3. Deploy -> Batch Endpoint
+![Batch ep](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(758).png?raw=true)
+4. Follow steps given below
+    - Endpoint
+        - Endpoint: New
+        - Endpoint Name: "Give name to endpoint"
+    - Model: Check and `Next`
+    - Deployment: Change details else keep default and `Next`
+    - Environment
+        - Create score.py with following code and select that file
+        ```
+        import os
+        import json
+        import pandas as pd
+        from typing import List, Any, Union
+
+        from azureml.studio.core.io.model_directory import ModelDirectory
+        from pathlib import Path
+        from azureml.studio.modules.ml.score.score_generic_module.score_generic_module import ScoreModelModule
+        from azureml.designer.serving.dagengine.converter import create_dfd_from_dict
+        from collections import defaultdict
+        from azureml.designer.serving.dagengine.utils import decode_nan
+        from azureml.studio.common.datatable.data_table import DataTable
+
+
+        model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'trained_model_outputs')
+        schema_file_path = Path(model_path) / '_schema.json'
+        with open(schema_file_path) as fp:
+            schema_data = json.load(fp)
+
+
+        def init():
+            global model
+            model = ModelDirectory.load(model_path).model
+
+        def run(mini_batch: List[str]):
+            data = pd.concat(
+                map(
+                    lambda fp: pd.read_csv(fp).assign(filename=os.path.basename(fp)), mini_batch
+                )
+            )
+
+            # Predict over the input data, minus the column filename which is not part of the model.
+            pred = model.predict(data.drop("filename", axis=1))
+
+            return pred
+        ```
