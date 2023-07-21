@@ -23,6 +23,7 @@ Before starting with the main objectives of this project there are some pre-requ
 
 ## 1. Create an Azure Storage account (ADLS)
 1. Search for **Storage accounts** on Microsoft Azure Portal.
+
 ![Search Storage Accounts](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/storage-account-1.png?raw=true)
 1. Click on **+ Create** button.
     - Fill in the details under the **Basics** tab.
@@ -35,4 +36,5 @@ Before starting with the main objectives of this project there are some pre-requ
     
     - Click on **Advanced** Tab
         - Check **Enable hierarchical namespace** check-box.
+        
 ![Check Hierarchical namespace](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(739).png?raw=true)
