@@ -22,11 +22,11 @@ Before starting with the main objectives of this project there are some pre-requ
 4. Azure Compute Cluster and Compute Instance
 
 ## 1. Create an Azure Storage account (ADLS)
-1. Search for **Storage accounts** on Microsoft Azure Portal.
+### 1. Search for **Storage accounts** on Microsoft Azure Portal.
 
    ![Search Storage Accounts](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/storage-account-1.png?raw=true)
 
-2. Click on **+ Create** button.
+### 2. Click on **+ Create** button.
     - Fill in the details under the **Basics** tab.
         - Select **Subscription**.
         - Select **Resource Group**.
@@ -43,7 +43,7 @@ Before starting with the main objectives of this project there are some pre-requ
       *Note: Change other options if required*
     - Click on **Review and Create**
 
-3. Once the ADLS is created Create Container inside ADLS as follows
+### 3. Once the ADLS is created Create Container inside ADLS as follows
     - Click on your ADLS by searching the name of ADLS(eg. 'adls1crainintern' in my case)
     - Click on **Containers** under **Data Storage** Tab.
     - Click on **+ Container** to create new container.
@@ -53,7 +53,7 @@ Before starting with the main objectives of this project there are some pre-requ
 
     ![Create Container](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/CreateContainer.png?raw=true)
 
-4. Upload Files or Folders inside the container.
+### 4. Upload Files or Folders inside the container.
     - Click **+ Add Directory** to Create the Folder and upload the file inside that Folder.
     - Click **Upload** and **Browse for files** to select the files from local machine.
 
