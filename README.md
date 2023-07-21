@@ -16,9 +16,23 @@ Model building, Model training, Model deployment(to Batch and Realtime Endpoint)
 Before starting with the main objectives of this project there are some pre-requisites.
 
 ## 0. Prerequisites
-1.	Azure Subscription
-2.	Azure Resource Group
-3.	Azure Workspace
-4.	Azure Compute Cluster and Compute Instance
+1. Azure Subscription
+2. Azure Resource Group
+3. Azure Workspace
+4. Azure Compute Cluster and Compute Instance
 
-## 1. Create Azure Storage account (ADLS)
+## 1. Create an Azure Storage account (ADLS)
+1. Search for **Storage accounts** on Microsoft Azure Portal.
+![Search Storage Accounts](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/storage-account-1.png?raw=true)
+1. Click on **+ Create** button.
+    - Fill in the details under the **Basics** tab.
+        - Select **Subscription**.
+        - Select **Resource Group**.
+        - Give Name to storage account
+        - Select **Region** or use the default region.
+    <div style="background-color: #f9f9f9; border-left: 6px solid #3caea3; padding: 10px;">
+    <p><strong>Note:</strong>Change other details under the "Basics" tab if required.</p>
+    </div>
+    - Click on **Advanced** Tab
+        - Check **Enable hierarchical namespace** check-box.
+        ![Check Hierarchical namespace](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(739).png?raw=true)
