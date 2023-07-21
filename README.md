@@ -104,3 +104,46 @@ To use the dataset in ADLS we must create the data asset in Azure ML Studio, so 
         - Review the changes.
         - Click on `Create`.
 
+## 3. Create Designer Model
+Once the data asset is created, we can create the model inside Azure ML Designer tool to train the model.
+
+1. Click on **'Designer'** tab.
+2. Click on **'+'** Create a new pipeline using classic prebuilt components.
+3. Under **'Asset Library'** tab select **'Data'** tab(From Data and Componenet), then select the data asset name (eg. customer-transaction in my case).
+
+![Importing dataset](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(746).png?raw=true)
+
+4. Create the basic pipeline to check how many features are important from available features.
+    - Click on **'Component'** Tab.
+    - Search, Drag & Drop: "Select Columns in Dataset"
+        - Connect the component to the dataset.
+        - Double-click the component.
+        - Click on **'Edit column'**.
+
+        ![Select Columns](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(747).png?raw=true)
+        - Follow steps given in image to **DROP UNWANTED COLUMNS**.
+        *Note: To drop columns use **Exclude** and to select useful columns use **Include**.*
+
+        ![Select columns](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(748).png?raw=true)
+
+    - Search, Drag & Drop: "Split data"
+        - Connect the component to 'Select Columns' component
+        - Double-click the component.
+        
+        ![Split data](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(749).png?raw=true)
+
+    - Search, Drag & Drop: "Two-Class Logistic Regression" Algorithm for train model
+    
+    - Search, Drag & Drop: "Train Model"
+        - Connect the node 'Untrained model' of "Two-Class Logistic Regression" container to 'Untrained model' of 'Train Model' Container.
+        - Connect the node 'Result Dataset1' of "Split data" container to 'Dataset' of 'Train Model' Container.
+        - Double click 'Train Model'.
+        - Click on **"Edit column"**.
+        - Select/Type name of target column.
+
+    - Search, Drag & Drop: "Score Model"
+        - Connect the node 'Trained model' of "Train Model" container to 'Trained model' of 'Score Model' Container.
+        - Connect the node 'Result Dataset2' of "Split data" container to 'Dataset' of 'Score Model' Container.
+
+    - Search, Drag & Drop: "Evaluate Model"
+        - Connect the node 'Scored Dataset' of "Score Model" container to 'Scored Dataset' of 'Evaluate Model' Container.
