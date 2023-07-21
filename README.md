@@ -43,9 +43,19 @@ Before starting with the main objectives of this project there are some pre-requ
       *Note: Change other options if required*
     - Click on **Review and Create**
 
-3. Once the ADLS is created upload the necessary files in your ADLS as follows
+3. Once the ADLS is created Create Container inside ADLS as follows
     - Click on your ADLS by searching the name of ADLS(eg. 'adls1crainintern' in my case)
     - Click on **Containers** under **Data Storage** Tab.
     - Click on **+ Container** to create new container.
-    - Give the Name to container and Click on **Create**('crain-adls' in my case).
+    - Give the Name to the container.
+    - Click on **Create**.
+    - The container gets created('crain-adls' in my case).
+
     ![Create Container](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/CreateContainer.png?raw=true)
+
+4. Upload Files or Folders inside the container.
+    - Click **+ Add Directory** to Create the Folder and upload the file inside that Folder.
+    - Click **Upload** and **Browse for files** to select the files from local machine.
+
+By Following the above steps upload the necessary dataset file (eg. .csv files) inside the folder present in container.
+
