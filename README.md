@@ -182,3 +182,26 @@ Once the job gets executed successfully, we can evaluate the model.
 ## 5. Register Model
 Once the Job gets executed susscessfully we can register the model which we can use for Batch Deployment.
 
+1. Follow the steps given below
+    - Double click on **'Train Model'** component.
+    - Select Output and Logs > Show data outputs > Register Model
+    ![Evaluation Results](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(755).png?raw=true)
+
+2. Give 'Model name' and `Create`.
+3. Check for your model name under **'Models'** tab (from side Menu).
+
+## 6. Create Environment for Deployment
+1. Click on **'Environments'** tab (from side menu)
+2. Click on **'Custom environments'**.
+3. Follow the steps given below
+    - Settings
+        - Fill Name
+        - **Select environment source**: Use existing docker image with optional conda file.
+
+        ![Evaluation Results](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(757).png?raw=true)
+        - Click `Next`
+    - Customize
+        - Copy paste the **'conda_env.yml'** file code here (The file is downloaded while registering the model. See the image).
+    - Review and Create the Environment.
+
+## 7. Create Batch Deployment
