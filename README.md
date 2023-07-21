@@ -24,12 +24,13 @@ Before starting with the main objectives of this project there are some pre-requ
 ## 1. Create an Azure Storage account (ADLS)
 1. Search for **Storage accounts** on Microsoft Azure Portal.
 
-![Search Storage Accounts](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/storage-account-1.png?raw=true)
-1. Click on **+ Create** button.
+   ![Search Storage Accounts](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/storage-account-1.png?raw=true)
+
+2. Click on **+ Create** button.
     - Fill in the details under the **Basics** tab.
         - Select **Subscription**.
         - Select **Resource Group**.
-        - Give Name to storage account
+        - Give **Name** to storage account (eg. 'adls1crainintern')
         - Select **Region** or use the default region.
     
     *Note: Change other details under the "Basics" tab if required.*
@@ -37,4 +38,14 @@ Before starting with the main objectives of this project there are some pre-requ
     - Click on **Advanced** Tab
         - Check **Enable hierarchical namespace** check-box.
         
-        ![Check Hierarchical namespace](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(739).png?raw=true)
+          ![Check Hierarchical namespace](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(739).png?raw=true)
+
+      *Note: Change other options if required*
+    - Click on **Review and Create**
+
+3. Once the ADLS is created upload the necessary files in your ADLS as follows
+    - Click on your ADLS by searching the name of ADLS(eg. 'adls1crainintern' in my case)
+    - Click on **Containers** under **Data Storage** Tab.
+    - Click on **+ Container** to create new container.
+    - Give the Name to container and Click on **Create**('crain-adls' in my case).
+    ![Create Container](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/CreateContainer.png?raw=true)
