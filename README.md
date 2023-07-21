@@ -126,8 +126,15 @@ Once the data asset is created, we can create the model inside Azure ML Designer
 
         ![Select columns](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(748).png?raw=true)
 
+    - Search, Drag & Drop: "Filter Based Feature Selection"
+        - Connect the component to the 'Select Columns in Dataset' component.
+        - Double-click the component.
+        - Provide **"Number of desired features"** (will select the top n features which are affecting the target column).
+        - Provide **'Target'** column by clicking on **'Edit Column'**.
+    *Note: Perform this step after analysing data carefully as it can drop certain important feature which may affect the accuracy of the model.*
+
     - Search, Drag & Drop: "Split data"
-        - Connect the component to 'Select Columns' component
+        - Connect the node 'Filtered dataset' of "Filter Based Feature Selection" container to 'Dataset' of 'Split Data' Container.
         - Double-click the component.
         
         ![Split data](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(749).png?raw=true)
@@ -147,3 +154,17 @@ Once the data asset is created, we can create the model inside Azure ML Designer
 
     - Search, Drag & Drop: "Evaluate Model"
         - Connect the node 'Scored Dataset' of "Score Model" container to 'Scored Dataset' of 'Evaluate Model' Container.
+
+5. Click on **'Settings'** > **"Select Compute cluster"**. > `Save`
+
+![Select compute cluster](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(750).png?raw=true)
+
+6. Click on `Validate` button. (Check for errors)
+7. Click on `Submit` button
+
+![Select compute cluster](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(751).png?raw=true)
+
+*Note: Check 'Select existing experiment' if exists. This window will create New Experiment and will create a Pipeline Job under that experiment. To check the Job details click on **'Jobs'** under 'Assets' tab and Select name of your experiment under **'Experiment'** tab and click on Job name.
+
+Jobs > All experiments -> <name of your Experiment> -> <name of your Job>*
+
