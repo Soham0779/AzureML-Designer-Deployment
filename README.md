@@ -267,3 +267,23 @@ Once the Job gets executed susscessfully we can register the model which we can 
 
             return pred
         ```
+        *Note: For libraries goto Models > your_model > Artifacts > trained_model_outputs(folder) > score.py(file). Copy all the libraries imported here and paste those in above script.*
+
+        - Search > Environment Created in Step **6. Create Environment for Deployment**
+        - Select Environment
+        - Click `Next`
+    - Compute Cluster: Select Compute Cluster and Instance count
+    - Review
+    - `Create`
+
+5. Goto: Endpoints > Batch Endpoints > your_batch_endpoint
+If deployment Succeeds then continue
+6. Click on **"Jobs"** tab under your batch endpoint and not from side menu.
+
+![Batch ep](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(759).png?raw=true)
+7. Follow steps given below
+    - Job Settings
+        - Deployment: Select the deployment (or go with default)
+    - Select data source
+        - Select the data asset crated in step **"7. Create Data Asset for Batch-Deployment"**
+    
