@@ -30,9 +30,9 @@ Before starting with the main objectives of this project there are some pre-requ
         - Select **Resource Group**.
         - Give Name to storage account
         - Select **Region** or use the default region.
-    <div style="background-color: #f9f9f9; border-left: 6px solid #3caea3; padding: 10px;">
-    <p><strong>Note:</strong>Change other details under the "Basics" tab if required.</p>
-    </div>
+    
+    *Note: Change other details under the "Basics" tab if required.*
+    
     - Click on **Advanced** Tab
         - Check **Enable hierarchical namespace** check-box.
-        ![Check Hierarchical namespace](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(739).png?raw=true)
+![Check Hierarchical namespace](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(739).png?raw=true)
