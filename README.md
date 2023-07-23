@@ -306,3 +306,39 @@ If deployment Succeeds then continue
 ![Real-time inference](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(763).png?raw=true)
 
 3. Submit the pipeline and create the job.
+
+4. Create Kubernetes Cluster
+   - Compute -> Kubernetes CLuster -> `+ New` -> AksCompute
+   - Fill the Details as per requirement
+
+   *Note: Select **'Compute purpose'** as **Dev-test** for testing purpose or if you are having free trial account.*
+
+5. Goto real-time inference **Job** pipeline created.
+
+6. Check if pipeline gets executed successfully.
+
+7. Deploy
+    - Click `Deploy`.
+    - Give Name to endpoint.
+    - Compute Name: Select your Kubernetes cluster compute name from the dropdown.
+    - `Deploy`
+![Real-time inference](https://github.com/Soham0779/AzureML-Designer-Deployment/blob/main/media/Screenshot%20(764).png?raw=true)
+
+8. Goto Endpoints -> Real-time endpoints -> Select name_of_your_ep
+    - Check Deployment State: Healthy/Unhealthy.
+    - If Healthy then Deployment is successful.
+
+9. Test the model
+    - Click on **'Test'** tab.
+    - Pass the data in format given.
+    - Click `Test`.
+
+10. Consume the model
+    - Click on **'Consume'** tab.
+    - Copy the Python code given in consume tab.
+    - Paste the code in Notebook.
+    - Copy **'Key'** from consume tab.
+    - Paste the key in `api_key = ''`.
+    - Provide the data in variable `data`.
+    - Run the code to see Output.
+
