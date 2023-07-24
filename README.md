@@ -342,20 +342,6 @@ If deployment Succeeds then continue
     - Provide the data in variable `data`.
     - Run the code to see the Output.
 
-# Results Comparison
-
-## ADLS
-1. Without ADLS
-2. With ADLS
-
-## Feature Selection
-1. Without Feature Selection
-2. With Feature Selection
-
-## Endpoint
-1. Real-time Endpoint
-2. Batch Endpoint
-
 # Limitations and Benefits
 
 ## Limitations
