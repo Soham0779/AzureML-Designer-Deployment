@@ -350,11 +350,7 @@ If deployment Succeeds then continue
     - In Jupyter Notebook we can install libraries with the help of the `pip install` command but inside the designer tool, we cannot directly execute the pip install command and install any library.
     - Solution: Download the .whl file of library required, then extract required packages from that file, Zip all required packages, upload zipped file inside data assets of the Azure ML Studio, Use the zipped data asset as component in designer tool and then we can execute the python script with all necessary libraries.
 
-2. Notebook Integration with Designer
-    - We cannot import the notebook inside our Designer tool.
-    - Solution: If we want to execute the code written inside our notebook then we can use the **'Execute Python Script'** component.
-
-3. Deploy again after modification
+2. Deploy again after modification
     - If some component gets changed or dataset gets updated or if pipeline is modified then we have to follow the complete procedure to deploy the model. Cannot automate this process.
     - Solution
         - We can automate this process with the help of Azure Notebooks, by writing all the code for model training, registering and deployment and then we can execute all cells to deploy the model.(We can use MLFlow/AutoML libraries to automate the process.)
