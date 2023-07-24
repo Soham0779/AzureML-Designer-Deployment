@@ -340,5 +340,53 @@ If deployment Succeeds then continue
     - Copy **'Key'** from consume tab.
     - Paste the key in `api_key = ''`.
     - Provide the data in variable `data`.
-    - Run the code to see Output.
+    - Run the code to see the Output.
 
+# Results Comparison
+
+## ADLS
+1. Without ADLS
+2. With ADLS
+
+## Feature Selection
+1. Without Feature Selection
+2. With Feature Selection
+
+## Endpoint
+1. Real-time Endpoint
+2. Batch Endpoint
+
+# Limitations and Benefits
+
+## Limitations
+
+1. Library Installation
+    - In Jupyter Notebook we can install libraries with the help of the `pip install` command but inside the designer tool, we cannot directly execute the pip install command and install any library.
+    - Solution: Download the .whl file of library required, then extract required packages from that file, Zip all required packages, upload zipped file inside data assets of the Azure ML Studio, Use the zipped data asset as component in designer tool and then we can execute the python script with all necessary libraries.
+
+2. Notebook Integration with Designer
+    - We cannot import the notebook inside our Designer tool.
+    - Solution: If we want to execute the code written inside our notebook then we can use the **'Execute Python Script'** component.
+
+3. Deploy again after modification
+    - If some component gets changed or dataset gets updated or if pipeline is modified then we have to follow the complete procedure to deploy the model. Cannot automate this process.
+    - Solution
+        - We can automate this process with the help of Azure Notebooks, by writing all the code for model training, registering and deployment and then we can execute all cells to deploy the model.(We can use MLFlow/AutoML libraries to automate the process.)
+        - We can use Azure DevOps Pipelines to build and deploy the model. In Azure DevOps for every single commit on main branch the pipeline gets executed automatically and deploy the model. Although building the pipeline in Azure DevOps is difficult than inside Azure ML Studio but once the pipeline is built then one can moniter the commits, check for modifications and automate the complete process.
+        (Limitation: Need to follow some folder structure.)
+
+## Benefits
+
+1. No-Code Platform
+    - We can perform almost every operation inside our Azure ML Designer tool which is needed for model training.
+
+2. ADLS
+    - Can use external Azure Data Lake Storage to store large dataset and use it inside Azure Designer. 
+    - Modifications in data present inside ADLS will automatically modify the data present inside Azure ML Data asset.
+    - No need to store the files on our local machine.
+
+3. Batch-Deployment
+    - If the test data size is very large then we can divide the data into batches, pass the data inside the folder in Azure ML Data Asset and further we can create Batch Deployment Job to get output as a .csv file.
+
+4. Inference Pipeline
+    - Rathar than creating score.py file for custom deployment to real-time endpoint one can create an inference pipeline for easy deployment to the real-time endpoint.
